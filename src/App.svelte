@@ -4,7 +4,7 @@ let green = 0;
 let blue = 0;
 let opa = 1;
 
-$: hex = function(r,g,b) {
+$: hex = function(r, g, b) {
 	 if (g !== undefined)
         return `#${Number(0x1000000 + r*0x10000 + g*0x100 + b).toString(16).substring(1).toUpperCase()}`;
     else
