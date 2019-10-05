@@ -1,4 +1,4 @@
-HEX COLOR FINDER
+COLOR PICKER
 ===
 
 *csak mert olyan jól hangzik...*
