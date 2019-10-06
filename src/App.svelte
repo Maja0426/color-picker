@@ -86,6 +86,26 @@ input:hover {
 .logo  {
 	text-align: center;
 }
+
+@media (max-width: 1280px) {
+
+	.logo img {
+		width: 100px;
+	}
+
+	.color-tab {
+		height: 50vh;
+	}
+}
+
+@media (max-width: 767px) {
+	.logo img {
+		width: 70px;
+	}
+	.color-tab {
+		height: 45vh;
+	}
+}
 	
 </style>
 <main>
@@ -101,7 +121,7 @@ input:hover {
 	</div>
 </div>
 
-<h1>HEX COLOR MAKER</h1>
+<h1>COLOR PICKER</h1>
 
 <form>
 	<label for="red">Red
