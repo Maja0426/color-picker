@@ -62,6 +62,7 @@ main {
 }
 
 form {
+	padding: 0 8px;
 	max-width: 800px;
 	display: flex;
 	flex-direction: row;
@@ -70,13 +71,47 @@ form {
 }
 
 label {
-	margin-bottom: 20px;
+	padding: 10px;
 }
 
 input {
 	display: block;
 	width: 90%;
 	margin-top: 10px;
+}
+
+input[type=number] {
+	margin-top: 2.5rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background: #ff3e00;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff3e00;
+  cursor: pointer;
 }
 
 input:hover {
@@ -125,19 +160,19 @@ input:hover {
 
 <form>
 	<label for="red">Red
-	<input type="range" min="0" max="255" id="red" step="1" bind:value={red}>
+	<input class="slider" type="range" min="0" max="255" id="red" step="1" bind:value={red}>
 	<input type="number" min="0" max="255" id="red" step="1" bind:value={red}>
 </label>
 <label for="green">Green
-	<input type="range" id="green" min="0" max="255" step="1" bind:value={green}>
+	<input class="slider" type="range" id="green" min="0" max="255" step="1" bind:value={green}>
 	<input type="number" id="green" min="0" max="255" step="1" bind:value={green}>
 </label>
 <label for="blue">Blue
-	<input type="range" id="blue" min="0" max="255" step="1" bind:value={blue}>
+	<input class="slider" type="range" id="blue" min="0" max="255" step="1" bind:value={blue}>
 	<input type="number" id="blue" min="0" max="255" step="1" bind:value={blue}>
 </label>
 <label for="opacity">Opacity
-	<input type="range" id="opacity" min="0" max="1" step="0.1" bind:value={opa}>
+	<input class="slider" type="range" id="opacity" min="0" max="1" step="0.1" bind:value={opa}>
 	<input type="number" id="opacity" min="0" max="1" step="0.1" bind:value={opa}>
 </label>
 </form>
