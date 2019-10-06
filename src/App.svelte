@@ -34,7 +34,15 @@ main {
 		transform: translate(-50%, -50%);
 	}
 
-	.params p {
+	.light {
+		color: #fff;
+	}
+
+	.dark {
+		color: #000;
+	}
+
+.params p {
 		font-size: 2.2rem;
 		text-align: center;
 		margin: 0;
@@ -150,7 +158,7 @@ input:hover {
 	<div class="color-box" style="background-color: rgb(0,0,{blue};"><span>BLUE</span></div>
 </div>
 <div class="color-tab" style="background-color: rgb({red}, {green}, {blue}); opacity: {opa}">
-	<div class="params">
+	<div class="params {red < 180 && green < 180 && blue < 180 ? 'light' : 'dark'} ">
 		<p>{hex(red, green, blue)}</p>
 		<p>rgb({red === undefined ? 0 : red},{green === undefined ? 0 : green},{blue === undefined ? 0 : blue})</p>
 	</div>
