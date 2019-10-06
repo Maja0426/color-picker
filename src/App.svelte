@@ -76,7 +76,7 @@ label {
 
 input {
 	display: block;
-	width: 90%;
+	width: 100%;
 	margin-top: 10px;
 }
 
@@ -99,16 +99,16 @@ input[type=number] {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%; 
   background: #ff3e00;
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background: #ff3e00;
   cursor: pointer;
@@ -171,10 +171,10 @@ input:hover {
 	<input class="slider" type="range" id="blue" min="0" max="255" step="1" bind:value={blue}>
 	<input type="number" id="blue" min="0" max="255" step="1" bind:value={blue}>
 </label>
-<label for="opacity">Opacity
+<!-- <label for="opacity">Opacity
 	<input class="slider" type="range" id="opacity" min="0" max="1" step="0.1" bind:value={opa}>
 	<input type="number" id="opacity" min="0" max="1" step="0.1" bind:value={opa}>
-</label>
+</label> -->
 </form>
 <div class="logo">
 	<img src="/img/svelte_logo.png" alt="svelte logo">
