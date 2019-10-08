@@ -11,6 +11,12 @@ $: hex = function(r, g, b) {
         return `#${Number(0x1000000 + r[0]*0x10000 + r[1]*0x100 + r[2]).toString(16).substring(1).toUpperCase()}`;
 }
 
+function reset() {
+	red = 0;
+	green = 0;
+	blue = 0;
+}
+
 </script>
 
 <style>
@@ -58,7 +64,6 @@ main {
 .color-box {
 	width: 33.333%;
 	height: 32px;
-	border-bottom: 1px solid #fff;
 	color: #fff;
 }
 
@@ -143,6 +148,7 @@ input:hover {
 
 @media (max-width: 767px) {
 	.logo img {
+		margin-top: -5px;
 		width: 70px;
 	}
 	.color-tab {
@@ -185,7 +191,7 @@ input:hover {
 </label> -->
 </form>
 <div class="logo">
-	<img src="/img/svelte_logo.png" alt="svelte logo">
+	<a href="#" on:click={reset} title="reset"><img src="/img/svelte_logo.png" alt="svelte logo"></a>
 </div>
 </main>
 
