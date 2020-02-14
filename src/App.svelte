@@ -163,7 +163,7 @@ input:hover {
 	<div class="color-box" style="background-color: rgb(0,{green},0;"><span>GREEN</span></div>
 	<div class="color-box" style="background-color: rgb(0,0,{blue};"><span>BLUE</span></div>
 </div>
-<div class="color-tab" style="background-color: rgb({red}, {green}, {blue}); opacity: {opa}">
+<div class="color-tab" style="background-color: rgb({red}, {green}, {blue});">
 	<div class="params {red < 180 && green < 180 && blue < 180 ? 'light' : 'dark'} ">
 		<p>{hex(red, green, blue)}</p>
 		<p>rgb({red === undefined ? 0 : red},{green === undefined ? 0 : green},{blue === undefined ? 0 : blue})</p>
@@ -185,13 +185,9 @@ input:hover {
 	<input class="slider" type="range" id="blue" min="0" max="255" step="1" bind:value={blue}>
 	<input type="number" id="blue" min="0" max="255" step="1" bind:value={blue}>
 </label>
-<!-- <label for="opacity">Opacity
-	<input class="slider" type="range" id="opacity" min="0" max="1" step="0.1" bind:value={opa}>
-	<input type="number" id="opacity" min="0" max="1" step="0.1" bind:value={opa}>
-</label> -->
 </form>
 <div class="logo">
-	<a href="#" on:click={reset} title="reset"><img src="/img/svelte_logo.png" alt="svelte logo"></a>
+	<a href="." on:click={reset} title="reset"><img src="/img/svelte_logo.png" alt="svelte logo"></a>
 </div>
 </main>
 
