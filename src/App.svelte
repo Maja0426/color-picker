@@ -2,7 +2,6 @@
 let red = 0;
 let green = 0;
 let blue = 0;
-let opa = 1;
 
 $: hex = function(r, g, b) {
 	 if (g !== undefined)
@@ -20,6 +19,7 @@ function reset() {
 </script>
 
 <style>
+
 main {
 	width: 100%;
 	height: 100%;
@@ -34,10 +34,11 @@ main {
 	}
 
 	.params {
-		position: relative;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 60vh;
 	}
 
 	.light {
@@ -53,6 +54,19 @@ main {
 		text-align: center;
 		margin: 0;
 		font-weight: 400;
+	}
+
+	.author {
+		position: relative;
+		text-align: center;
+	}
+
+	.author a {
+		color: #000;
+	}
+
+	svg {
+		width: 42px;
 	}
 
 .wrapper {
@@ -135,7 +149,7 @@ input:hover {
 	text-align: center;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1366px) {
 
 	.logo img {
 		width: 100px;
@@ -147,13 +161,26 @@ input:hover {
 }
 
 @media (max-width: 767px) {
+	.params {
+		height: 50vh;
+	}
 	.logo img {
 		margin-top: -5px;
 		width: 70px;
 	}
-	.color-tab {
-		height: 45vh;
+}
+
+@media (max-width: 360px) {
+	h1 {
+		font-size: 26px;
 	}
+	.author {
+		font-size: 14px;
+	}
+	.logo img {
+		width: 50px;
+	}
+	
 }
 	
 </style>
@@ -167,6 +194,24 @@ input:hover {
 	<div class="params {red < 180 && green < 180 && blue < 180 ? 'light' : 'dark'} ">
 		<p>{hex(red, green, blue)}</p>
 		<p>rgb({red === undefined ? 0 : red},{green === undefined ? 0 : green},{blue === undefined ? 0 : blue})</p>
+		{#if hex(red, green, blue) === '#FFFFFF'}
+			<div class="author">
+		<h4>Created:<br>Tamas Majoros</h4>
+		<h4>Web:<br><a href="https://smartbeeweb.hu" target="_blnk" rel="noreferrer">SmartBee</a></h4>
+		<a href="https://github.com/Maja0426/color-picker" target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>https://github.com/Maja0426/color-picker</title><g id="Github_2" data-name="Github 2"><g id="_Group_" data-name="&lt;Group&gt;"><path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" d="M12,10.72H12c-3,0-5.6-.83-7.15.74a4.54,4.54,0,0,0-1.32,3.3c0,5.11,3.71,5.74,8.46,5.74H12c4.76,0,8.46-.63,8.46-5.74a4.54,4.54,0,0,0-1.32-3.3C17.63,9.89,15,10.72,12,10.72ZM14.17,22.5H9.83C8,22.5.5,22.34.5,12.67A7.61,7.61,0,0,1,2.37,7.46a12.82,12.82,0,0,1,.79-6s2.26.27,5.69,2.8A12.59,12.59,0,0,1,12,4a12.58,12.58,0,0,1,3.15.32c3.43-2.53,5.69-2.8,5.69-2.8a12.82,12.82,0,0,1,.79,6,7.61,7.61,0,0,1,1.87,5.21C23.5,22.34,16,22.5,14.17,22.5Zm3.33-7c0,1.66-.67,3-1.5,3s-1.5-1.34-1.5-3,.67-3,1.5-3S17.5,13.84,17.5,15.5Zm-8,0c0,1.66-.67,3-1.5,3s-1.5-1.34-1.5-3,.67-3,1.5-3S9.5,13.84,9.5,15.5Z" style="fill:303c42;stroke:#303c42;stroke-linecap:round;stroke-linejoin:round"/></g></g>
+	<metadata>
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			<rdf:Description about="https://iconscout.com/legal#licenses" dc:title="social; media; social media; logo; github; 2" dc:description="social; media; social media; logo; github; 2" dc:publisher="Iconscout" dc:date="2017-02-21" dc:format="image/svg+xml" dc:language="en">
+				<dc:creator>
+					<rdf:Bag>
+						<rdf:li>Alpár - Etele Méder</rdf:li>
+					</rdf:Bag>
+				</dc:creator>
+			</rdf:Description>
+		</rdf:RDF>
+    </metadata></svg></a>
+	</div>
+		{/if}
 	</div>
 </div>
 
