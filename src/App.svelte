@@ -88,6 +88,15 @@ main {
 	padding: 8px;
 }
 
+button {
+	background: transparent;
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
 form {
 	padding: 0 8px;
 	max-width: 800px;
@@ -232,7 +241,7 @@ input:hover {
 </label>
 </form>
 <div class="logo">
-	<a href="#" on:click|preventDefault={reset} title="reset"><img src="/img/svelte_logo.png" alt="svelte logo"></a>
+	<button on:click|preventDefault={reset} title="reset"><img src="/img/svelte_logo.png" alt="svelte logo"></button>
 </div>
 </main>
 
