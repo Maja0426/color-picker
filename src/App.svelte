@@ -232,7 +232,7 @@ input:hover {
 </label>
 </form>
 <div class="logo">
-	<a href="." on:click|preventDefault={reset} title="reset"><img src="/img/svelte_logo.png" alt="svelte logo"></a>
+	<a href="#" on:click|preventDefault={reset} title="reset"><img src="/img/svelte_logo.png" alt="svelte logo"></a>
 </div>
 </main>
 
